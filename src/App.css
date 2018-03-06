@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#slideWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#aboutSlideshow {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#slide {
+  width: 100%;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.arrowR {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 10px 20px 10px 5px;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.arrow:hover {
+  border: 2px solid gray;
+  border-radius: 25px;
+}
+
+.arrowR:hover {
+  border: 2px solid gray;
+  border-radius: 25px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
