@@ -1,13 +1,12 @@
 import React from 'react'
 import AboutSlideshow from './AboutSlideshow'
-import { Icon } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 
   class About extends React.Component {
     render() {
       return(
-        <div>
-          <h1>About</h1>
-          <p>Hi, I'm Eugene and I am a full stack web developer. </p>
+        <div className="container">
+          <Header dividing inverted size="huge" className="item">About</Header>
           <AboutSlideshow />
         </div>
       )

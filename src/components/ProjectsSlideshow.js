@@ -7,11 +7,11 @@ class ProjectsSlideshow extends React.Component {
     images: [
       {
         path: 'projects_rentair.png',
-        caption: 'Final Project'
+        caption: "Flatiron School Final Project: Built a React/Redux Single Page Application with a Rails API and Postgres Database in 3 weeks. The application is essentially a clone of the Turo website, a web application that allows users to rent their cars to each other."
       },
       {
         path: 'projects_watch_or_nah.png',
-        caption: 'Mod 3 Project'
+        caption: "Flatiron School Javascript Module Project: Built a Functional Vanilla JS Single Page Application with a Rails API and Postgres Database. The application loads upcomming movies trailers from the TMDB API and a user can choose whether or not they would watch it, by dragging the trailer on the screen, similar to Tinder's swiping feature."
       }
     ],
     photoIndex: 0
@@ -34,13 +34,19 @@ class ProjectsSlideshow extends React.Component {
     let image = images[photoIndex]
     let caption = images[photoIndex].caption
     return(
-      <div id="slideWrapper">
-        <img src="https://cdn4.iconfinder.com/data/icons/browser-ui-small-size-optimized-set/154/arrow-left-navigation-browser-512.png" className="arrowR" onClick={() => this.handleClick('prev')} />
-        <div id="aboutSlideshow">
-          <img src={require('../media/' + image.path)} alt={image.path} size='large' id="slide"/>
+      <div className="item">
+        <div className="slideShowContainer">
+          <div id="slideWrapper">
+            <Icon inverted name="arrow left" link size="huge" onClick={() => this.handleClick('prev')} />
+            <div id="aboutSlideshow" style={{marginBottom: "2%"}}>
+              <img src={require('../media/' + image.path)} alt={image.path} size='large' id="slide"/>
+            </div>
+            <Icon inverted name="arrow right" link size="huge" onClick={() => this.handleClick('next')} />
+          </div>
+          <div className="captions">
+            <p>{caption}</p>
+          </div>
         </div>
-        <img src="https://cdn4.iconfinder.com/data/icons/browser-ui-small-size-optimized-set/154/arrow-right-navigation-browser-512.png" className="arrow" onClick={() => this.handleClick('next')} />
-        <p>{caption}</p>
       </div>
     )
   }
